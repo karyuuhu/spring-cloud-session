@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: sessionservice
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/views/
+#      suffix: .jsp
+#    static-path-pattern: /resources/**
+#    session:
+#      sotre-type: redis
+#    reids:
+#      host: localhost
+#      port: 6379
+    jmx:
+      enabled: false
+      
+server:
+  port: 8002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8001/eureka
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    
+ribbon:
+  eureka:
+    enabled: true
